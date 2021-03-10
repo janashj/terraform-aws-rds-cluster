@@ -15,7 +15,7 @@ module "rds_cluster" {
   identifier          = "mydb"
   allocated_storage   = 20
   storage_type        = "gp2"
-  engine              = "mysql"
+  engine              = "aurora-mysql"
   engine_version      = "5.7"
   instance_class      = "db.t2.micro"
   username            = "foo"
@@ -27,6 +27,7 @@ module "rds_cluster" {
     ]
 }
 ```
+
 
 2) or, in this case you have to create 3 files, 1 module.tf, 1 region.tfvars, 1 variables.tf. 
 Copy and paste below codes to those 3 files:
