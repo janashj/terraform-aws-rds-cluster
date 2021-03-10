@@ -1,9 +1,10 @@
 resource "aws_rds_cluster" "rds" {
-  cluster_identifier   = var.cluster_identifier
-  engine               = var.engine
-  engine_version       = var.engine_version
-  database_name        = var.cluster_identifier
-  master_username      = var.username
+  cluster_identifier = var.cluster_identifier
+  engine             = var.engine
+  engine_version     = var.engine_version
+  database_name      = var.database_name
+  master_username    = var.username
+#  master_password    = "foobarbaz"
   master_password      = random_password.password.result
   db_subnet_group_name = aws_db_subnet_group.db.name
   skip_final_snapshot  = true # you have to mention this, otherwise it will create snapshots

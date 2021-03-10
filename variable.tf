@@ -6,6 +6,7 @@ variable "db_access" {
   type = list(any)
 }
 variable "cluster_identifier" {}
+variable "database_name" {}
 variable "allocated_storage" {}
 variable "engine" {}
 variable "storage_type" {}

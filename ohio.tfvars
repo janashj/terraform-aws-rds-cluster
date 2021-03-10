@@ -5,6 +5,7 @@ subnet_ids = [
   "subnet-040bcd4f261129b78"
 ]
 cluster_identifier  = "mydb"
+database_name       = "db"
 allocated_storage   = 20
 storage_type        = "gp2"
 engine              = "aurora-mysql"
